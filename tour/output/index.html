@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+		<title>&#1040;&#1091;&#1076;. 145</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="mobile-web-app-capable" content="yes" />		
+		<style type="text/css" title="Default">
+			body, div, h1, h2, h3, span, p {
+				font-family: Verdana,Arial,Helvetica,sans-serif;
+			}
+			/* fullscreen */
+			html {
+				height:100%;
+			}
+			body {
+				height:100%;
+				margin: 0px;
+				overflow:hidden; /* disable scrollbars */
+				font-size: 10pt;
+			}
+			/* fix for scroll bars on webkit & >=Mac OS X Lion */ 
+			::-webkit-scrollbar {
+				background-color: rgba(0,0,0,0.5);
+				width: 0.75em;
+			}
+			::-webkit-scrollbar-thumb {
+    			background-color:  rgba(255,255,255,0.5);
+			}
+		</style>	
+	</head>
+	<body>
+<!-- - - - - - - 8<- - - - - - cut here - - - - - 8<- - - - - - - -->
+		<script type="text/javascript" src="pano2vr_player.js">
+		</script>
+		<script type="text/javascript" src="skin.js">
+		</script>
+		<script type="text/javascript" src="pano2vrgyro.js">
+		</script>
+		<div id="container" style="width:100%;height:100%;">
+		<br>Loading...<br><br>
+		This content requires HTML5 with CSS3 3D Transforms or WebGL.
+		</div>
+		<script type="text/javascript">
+		var startNode=document.location.hash.substring(1);
+		if (("onhashchange" in window) && (!(/MSIE (\d+\.\d+);/.test(navigator.userAgent)))) {
+			window.onhashchange = function () {
+				pano.openNext('{' + window.location.hash.substring(1) + '}');
+         	}
+	    } else {
+        	var lastHash = window.location.hash;
+        	window.setInterval(function () {
+	           	if (window.location.hash != lastHash) {
+   	        		lastHash = window.location.hash;
+					pano.openNext('{' + window.location.hash.substring(1) + '}');
+        	   	}
+        	}, 100);
+		}
+	
+			// create the panorama player with the container
+			pano=new pano2vrPlayer("container");
+			pano.startNode=startNode;
+		// add the skin object
+		skin=new pano2vrSkin(pano);
+		// load the configuration
+		panorama='<?xml version="1.0" encoding="UTF-8"?>';
+			panorama+='<tour start="node1">';
+			panorama+='  <panorama hideabout="1" id="node1">';
+			panorama+='    <input levelingpitch="0" levelbiashidpi="0.400" width="2500" leveltileurl="tiles/ready-pano__145/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" leveltilesize="510" levelbias="0.400" height="2500" levelingroll="0">';
+			panorama+='      <level preload="0" predecode="0" width="2500" height="2500"/>';
+			panorama+='      <level preload="0" predecode="0" width="1250" height="1250"/>';
+			panorama+='      <level preload="0" predecode="0" width="625" height="625"/>';
+			panorama+='      <level preload="1" predecode="1" width="312" height="312"/>';
+			panorama+='      <preview strip="1" color="0x808080"/>';
+			panorama+='    </input>';
+			panorama+='    <view pannorth="0" fovmode="0">';
+			panorama+='      <start fov="74.1" tilt="0" pan="161.98"/>';
+			panorama+='      <min fov="15" tilt="-90" pan="0"/>';
+			panorama+='      <max fov="100" tilt="90" pan="360"/>';
+			panorama+='    </view>';
+			panorama+='    <userdata latitude="" copyright="" info="" source="" description="&#1051;&#1072;&#1073;&#1086;&#1088;&#1072;&#1090;&#1086;&#1088;&#1080;&#1103; &#1089;&#1086;&#1074;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1093; &#1090;&#1088;&#1072;&#1085;&#1089;&#1087;&#1086;&#1088;&#1090;&#1085;&#1099;&#1093; &#1090;&#1077;&#1093;&#1085;&#1086;&#1083;&#1086;&#1075;&#1080;&#1081; &#1080; &#1089;&#1080;&#1089;&#1090;&#1077;&#1084; &#1080;&#1084;&#1077;&#1085;&#1080; &#1087;&#1088;&#1086;&#1092;&#1077;&#1089;&#1089;&#1086;&#1088;&#1072;, &#1076;&#1086;&#1082;&#1090;&#1086;&#1088;&#1072; &#1090;&#1077;&#1093;&#1085;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1093; &#1085;&#1072;&#1091;&#1082; &#1042;&#1080;&#1082;&#1090;&#1086;&#1088;&#1072; &#1043;&#1088;&#1080;&#1075;&#1086;&#1088;&#1100;&#1077;&#1074;&#1080;&#1095;&#1072; &#1043;&#1088;&#1080;&#1075;&#1086;&#1088;&#1077;&#1085;&#1082;&#1086;" author="" comment="" title="&#1040;&#1091;&#1076;. 145" tags="virtual_tour_01" longitude="" datetime=""/>';
+			panorama+='    <hotspots width="180" wordwrap="1" height="20">';
+			panorama+='      <label textcolor="0x000000" borderradius="1" bordercolor="0x000000" backgroundcolor="0xffffff" width="180" textalpha="1" enabled="1" background="1" wordwrap="1" height="20" border="1" borderalpha="1" backgroundalpha="1"/>';
+			panorama+='      <polystyle bordercolor="0x0000ff" backgroundcolor="0x0000ff" mode="0" handcursor="1" borderalpha="1" backgroundalpha="0.2509803921568627"/>';
+			panorama+='      <hotspot target="168.25/0/83.3" skinid="ht_node" tilt="-8.31" url="{node2}" description="" title="&#1040;&#1091;&#1076;. 236&#1072;" id="Point01" pan="-149.13"/>';
+			panorama+='      <hotspot target="14.31/-3.16/74.1" skinid="ht_node" tilt="5.98" url="{node4}" description="" title="&#1040;&#1091;&#1076;. 433" id="Point02" pan="-149.15"/>';
+			panorama+='    </hotspots>';
+			panorama+='    <media/>';
+			panorama+='    <transition zoomout="0" type="crossdissolve" blendcolor="0x000000" zoomin="0" enabled="1" blendtime="1" softedge="0" zoomoutpause="1" zoomspeed="2" zoomfov="20"/>';
+			panorama+='    <autorotate noderandom="1" returntohorizon="0.000" speed="0.050" startloaded="1" nodedelay="0.00" useanimation="0" delay="6.00"/>';
+			panorama+='    <control lockedmouse="0" lockedkeyboardzoom="0" sensitivity="8" lockedkeyboard="0" invertwheel="1" invertcontrol="1" contextfullscreen="0" hideabout="1" lockedwheel="0" simulatemass="1" speedwheel="1" dblclickfullscreen="0">';
+			panorama+='      <menulink text="&#1057;&#1072;&#1081;&#1090; &#1044;&#1042;&#1043;&#1059;&#1055;&#1057;" url="http://www.dvgups.ru/"/>';
+			panorama+='      <menulink text="&#1069;&#1083;&#1077;&#1082;&#1090;&#1088;&#1086;&#1085;&#1085;&#1099;&#1081; &#1078;&#1091;&#1088;&#1085;&#1072;&#1083; " url="http://moydvgups.ru/"/>';
+			panorama+='    </control>';
+			panorama+='  </panorama>';
+			panorama+='  <panorama hideabout="1" id="node2">';
+			panorama+='    <input levelingpitch="0.232953" levelbiashidpi="0.400" width="2500" leveltileurl="tiles/ready-pano__236a/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" leveltilesize="510" levelbias="0.400" height="2500" levelingroll="-0.525815">';
+			panorama+='      <level preload="0" predecode="0" width="2500" height="2500"/>';
+			panorama+='      <level preload="0" predecode="0" width="1250" height="1250"/>';
+			panorama+='      <level preload="0" predecode="0" width="625" height="625"/>';
+			panorama+='      <level preload="1" predecode="1" width="312" height="312"/>';
+			panorama+='      <preview strip="1" color="0x808080"/>';
+			panorama+='    </input>';
+			panorama+='    <view pannorth="0" fovmode="0">';
+			panorama+='      <start fov="83.3" tilt="0" pan="168.25"/>';
+			panorama+='      <min fov="15" tilt="-90" pan="0"/>';
+			panorama+='      <max fov="100" tilt="90" pan="360"/>';
+			panorama+='    </view>';
+			panorama+='    <userdata latitude="" copyright="" info="" source="" description="&#1057;&#1090;&#1091;&#1076;&#1077;&#1085;&#1095;&#1077;&#1089;&#1082;&#1086;&#1077; &#1085;&#1072;&#1091;&#1095;&#1085;&#1086;&#1077; &#1082;&#1086;&#1085;&#1089;&#1090;&#1088;&#1091;&#1082;&#1090;&#1086;&#1088;&#1089;&#1082;&#1086;&#1077; &#1073;&#1102;&#1088;&#1086; &#171;&#1056;&#1077;&#1096;&#1077;&#1085;&#1080;&#1077; &#1087;&#1088;&#1086;&#1073;&#1083;&#1077;&#1084; 3d-&#1087;&#1077;&#1095;&#1072;&#1090;&#1080; &#1082;&#1086;&#1085;&#1089;&#1090;&#1088;&#1091;&#1082;&#1094;&#1080;&#1081; &#1089;&#1083;&#1086;&#1078;&#1085;&#1099;&#1093; &#1092;&#1086;&#1088;&#1084;&#187;" author="" comment="" title="&#1040;&#1091;&#1076;. 236&#1072;" tags="virtual_tour_01" longitude="" datetime=""/>';
+			panorama+='    <hotspots width="180" wordwrap="1" height="20">';
+			panorama+='      <label textcolor="0x000000" borderradius="1" bordercolor="0x000000" backgroundcolor="0xffffff" width="180" textalpha="1" enabled="1" background="1" wordwrap="1" height="20" border="1" borderalpha="1" backgroundalpha="1"/>';
+			panorama+='      <polystyle bordercolor="0x0000ff" backgroundcolor="0x0000ff" mode="0" handcursor="1" borderalpha="1" backgroundalpha="0.2509803921568627"/>';
+			panorama+='      <hotspot target="161.98/0/74.1" skinid="ht_node" tilt="-9.54" url="{node1}" description="" title="&#1040;&#1091;&#1076;. 145" id="Point01" pan="-157.22"/>';
+			panorama+='      <hotspot target="-115.77/-6.07/87.6" skinid="ht_node" tilt="9.4" url="{node5}" description="" title="&#1050;&#1072;&#1073;. 439" id="Point02" pan="-156.17"/>';
+			panorama+='    </hotspots>';
+			panorama+='    <media/>';
+			panorama+='    <transition zoomout="0" type="crossdissolve" blendcolor="0x000000" zoomin="0" enabled="1" blendtime="1" softedge="0" zoomoutpause="1" zoomspeed="2" zoomfov="20"/>';
+			panorama+='    <autorotate noderandom="1" returntohorizon="0.000" speed="0.050" startloaded="1" nodedelay="0.00" useanimation="0" delay="6.00"/>';
+			panorama+='    <control lockedmouse="0" lockedkeyboardzoom="0" sensitivity="8" lockedkeyboard="0" invertwheel="1" invertcontrol="1" contextfullscreen="0" hideabout="1" lockedwheel="0" simulatemass="1" speedwheel="1" dblclickfullscreen="0">';
+			panorama+='      <menulink text="&#1057;&#1072;&#1081;&#1090; &#1044;&#1042;&#1043;&#1059;&#1055;&#1057;" url="http://www.dvgups.ru/"/>';
+			panorama+='      <menulink text="&#1069;&#1083;&#1077;&#1082;&#1090;&#1088;&#1086;&#1085;&#1085;&#1099;&#1081; &#1078;&#1091;&#1088;&#1085;&#1072;&#1083; " url="http://moydvgups.ru/"/>';
+			panorama+='    </control>';
+			panorama+='  </panorama>';
+			panorama+='  <panorama hideabout="1" id="node3">';
+			panorama+='    <input levelingpitch="-0.310319" levelbiashidpi="0.400" width="2500" leveltileurl="tiles/ready-pano__426/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" leveltilesize="510" levelbias="0.400" height="2500" levelingroll="-0.5411240000000001">';
+			panorama+='      <level preload="0" predecode="0" width="2500" height="2500"/>';
+			panorama+='      <level preload="0" predecode="0" width="1250" height="1250"/>';
+			panorama+='      <level preload="0" predecode="0" width="625" height="625"/>';
+			panorama+='      <level preload="1" predecode="1" width="312" height="312"/>';
+			panorama+='      <preview strip="1" color="0x808080"/>';
+			panorama+='    </input>';
+			panorama+='    <view pannorth="0" fovmode="0">';
+			panorama+='      <start fov="74.1" tilt="0" pan="88.56"/>';
+			panorama+='      <min fov="15" tilt="-90" pan="0"/>';
+			panorama+='      <max fov="100" tilt="90" pan="360"/>';
+			panorama+='    </view>';
+			panorama+='    <userdata latitude="" copyright="" info="" source="" description=" &#1050;&#1072;&#1073;&#1080;&#1085;&#1077;&#1090; &#1085;&#1072;&#1095;&#1077;&#1088;&#1090;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086;&#1081; &#1075;&#1077;&#1086;&#1084;&#1077;&#1090;&#1088;&#1080;&#1080; &#1080; &#1080;&#1085;&#1078;&#1077;&#1085;&#1077;&#1088;&#1085;&#1086;&#1081; &#1075;&#1088;&#1072;&#1092;&#1080;&#1082;&#1080;" author="" comment="" title="&#1040;&#1091;&#1076;. 426" tags="virtual_tour_01" longitude="" datetime=""/>';
+			panorama+='    <hotspots width="180" wordwrap="1" height="20">';
+			panorama+='      <label textcolor="0x000000" borderradius="1" bordercolor="0x000000" backgroundcolor="0xffffff" width="180" textalpha="1" enabled="1" background="1" wordwrap="1" height="20" border="1" borderalpha="1" backgroundalpha="1"/>';
+			panorama+='      <polystyle bordercolor="0x0000ff" backgroundcolor="0x0000ff" mode="0" handcursor="1" borderalpha="1" backgroundalpha="0.2509803921568627"/>';
+			panorama+='      <hotspot target="-115.77/-6.07/87.6" skinid="ht_node" tilt="-8.94" url="{node5}" description="" title="&#1050;&#1072;&#1073;. 439" id="Point01" pan="-34.31"/>';
+			panorama+='      <hotspot target="14.31/-3.16/74.1" skinid="ht_node" tilt="3.89" url="{node4}" description="" title="&#1040;&#1091;&#1076;. 433" id="Point02" pan="-34.05"/>';
+			panorama+='    </hotspots>';
+			panorama+='    <media/>';
+			panorama+='    <transition zoomout="0" type="crossdissolve" blendcolor="0x000000" zoomin="0" enabled="1" blendtime="1" softedge="0" zoomoutpause="1" zoomspeed="2" zoomfov="20"/>';
+			panorama+='    <autorotate noderandom="1" returntohorizon="0.000" speed="0.050" startloaded="1" nodedelay="0.00" useanimation="0" delay="6.00"/>';
+			panorama+='    <control lockedmouse="0" lockedkeyboardzoom="0" sensitivity="8" lockedkeyboard="0" invertwheel="1" invertcontrol="1" contextfullscreen="0" hideabout="1" lockedwheel="0" simulatemass="1" speedwheel="1" dblclickfullscreen="0">';
+			panorama+='      <menulink text="&#1057;&#1072;&#1081;&#1090; &#1044;&#1042;&#1043;&#1059;&#1055;&#1057;" url="http://www.dvgups.ru/"/>';
+			panorama+='      <menulink text="&#1069;&#1083;&#1077;&#1082;&#1090;&#1088;&#1086;&#1085;&#1085;&#1099;&#1081; &#1078;&#1091;&#1088;&#1085;&#1072;&#1083; " url="http://moydvgups.ru/"/>';
+			panorama+='    </control>';
+			panorama+='  </panorama>';
+			panorama+='  <panorama hideabout="1" id="node4">';
+			panorama+='    <input levelingpitch="-1.15374" levelbiashidpi="0.400" width="2500" leveltileurl="tiles/ready-pano__433/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" leveltilesize="510" levelbias="0.400" height="2500" levelingroll="0.293395">';
+			panorama+='      <level preload="0" predecode="0" width="2500" height="2500"/>';
+			panorama+='      <level preload="0" predecode="0" width="1250" height="1250"/>';
+			panorama+='      <level preload="0" predecode="0" width="625" height="625"/>';
+			panorama+='      <level preload="1" predecode="1" width="312" height="312"/>';
+			panorama+='      <preview strip="1" color="0x808080"/>';
+			panorama+='    </input>';
+			panorama+='    <view pannorth="0" fovmode="0">';
+			panorama+='      <start fov="74.1" tilt="-3.16" pan="14.31"/>';
+			panorama+='      <min fov="15" tilt="-90" pan="0"/>';
+			panorama+='      <max fov="100" tilt="90" pan="360"/>';
+			panorama+='    </view>';
+			panorama+='    <userdata latitude="" copyright="" info="" source="" description="&#1051;&#1072;&#1073;&#1086;&#1088;&#1072;&#1090;&#1086;&#1088;&#1080;&#1103; &#1089;&#1080;&#1089;&#1090;&#1077;&#1084; &#1072;&#1074;&#1090;&#1086;&#1084;&#1072;&#1090;&#1080;&#1079;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1085;&#1086;&#1075;&#1086; &#1087;&#1088;&#1086;&#1077;&#1082;&#1090;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103;" author="" comment="" title="&#1040;&#1091;&#1076;.433" tags="virtual_tour_01" longitude="" datetime=""/>';
+			panorama+='    <hotspots width="180" wordwrap="1" height="20">';
+			panorama+='      <label textcolor="0x000000" borderradius="1" bordercolor="0x000000" backgroundcolor="0xffffff" width="180" textalpha="1" enabled="1" background="1" wordwrap="1" height="20" border="1" borderalpha="1" backgroundalpha="1"/>';
+			panorama+='      <polystyle bordercolor="0x0000ff" backgroundcolor="0x0000ff" mode="0" handcursor="1" borderalpha="1" backgroundalpha="0.2509803921568627"/>';
+			panorama+='      <hotspot target="161.98/0/74.1" skinid="ht_node" tilt="-6.98" url="{node1}" description="" title="&#1040;&#1091;&#1076;. 145" id="Point01" pan="-16.55"/>';
+			panorama+='      <hotspot target="88.56/0/74.1" skinid="ht_node" tilt="1.91" url="{node3}" description="" title="&#1040;&#1091;&#1076;. 426" id="Point02" pan="-16.61"/>';
+			panorama+='    </hotspots>';
+			panorama+='    <media/>';
+			panorama+='    <transition zoomout="0" type="crossdissolve" blendcolor="0x000000" zoomin="0" enabled="1" blendtime="1" softedge="0" zoomoutpause="1" zoomspeed="2" zoomfov="20"/>';
+			panorama+='    <autorotate noderandom="1" returntohorizon="0.000" speed="0.050" startloaded="1" nodedelay="0.00" useanimation="0" delay="6.00"/>';
+			panorama+='    <control lockedmouse="0" lockedkeyboardzoom="0" sensitivity="8" lockedkeyboard="0" invertwheel="1" invertcontrol="1" contextfullscreen="0" hideabout="1" lockedwheel="0" simulatemass="1" speedwheel="1" dblclickfullscreen="0">';
+			panorama+='      <menulink text="&#1057;&#1072;&#1081;&#1090; &#1044;&#1042;&#1043;&#1059;&#1055;&#1057;" url="http://www.dvgups.ru/"/>';
+			panorama+='      <menulink text="&#1069;&#1083;&#1077;&#1082;&#1090;&#1088;&#1086;&#1085;&#1085;&#1099;&#1081; &#1078;&#1091;&#1088;&#1085;&#1072;&#1083; " url="http://moydvgups.ru/"/>';
+			panorama+='    </control>';
+			panorama+='  </panorama>';
+			panorama+='  <panorama hideabout="1" id="node5">';
+			panorama+='    <input levelingpitch="-0.412467" levelbiashidpi="0.400" width="2500" leveltileurl="tiles/ready-pano__439/cf_%c/l_%l/c_%x/tile_%y.jpg" overlap="1" leveltilesize="510" levelbias="0.400" height="2500" levelingroll="2.30539">';
+			panorama+='      <level preload="0" predecode="0" width="2500" height="2500"/>';
+			panorama+='      <level preload="0" predecode="0" width="1250" height="1250"/>';
+			panorama+='      <level preload="0" predecode="0" width="625" height="625"/>';
+			panorama+='      <level preload="1" predecode="1" width="312" height="312"/>';
+			panorama+='      <preview strip="1" color="0x808080"/>';
+			panorama+='    </input>';
+			panorama+='    <view pannorth="0" fovmode="0">';
+			panorama+='      <start fov="87.6" tilt="-6.07" pan="-115.77"/>';
+			panorama+='      <min fov="15" tilt="-90" pan="0"/>';
+			panorama+='      <max fov="100" tilt="90" pan="360"/>';
+			panorama+='    </view>';
+			panorama+='    <userdata latitude="" copyright="" info="" source="" description="&#1050;&#1072;&#1073;&#1080;&#1085;&#1077;&#1090; &#1082;&#1072;&#1092;&#1077;&#1076;&#1088;&#1099; &#171;&#1042;&#1099;&#1095;&#1080;&#1089;&#1083;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1072;&#1103; &#1090;&#1077;&#1093;&#1085;&#1080;&#1082;&#1072; &#1080; &#1082;&#1086;&#1084;&#1087;&#1100;&#1102;&#1090;&#1077;&#1088;&#1085;&#1072;&#1103; &#1075;&#1088;&#1072;&#1092;&#1080;&#1082;&#1072;&#187;" author="" comment="" title="&#1050;&#1072;&#1073;. 439" tags="virtual_tour_01" longitude="" datetime=""/>';
+			panorama+='    <hotspots width="180" wordwrap="1" height="20">';
+			panorama+='      <label textcolor="0x000000" borderradius="1" bordercolor="0x000000" backgroundcolor="0xffffff" width="180" textalpha="1" enabled="1" background="1" wordwrap="1" height="20" border="1" borderalpha="1" backgroundalpha="1"/>';
+			panorama+='      <polystyle bordercolor="0x0000ff" backgroundcolor="0x0000ff" mode="0" handcursor="1" borderalpha="1" backgroundalpha="0.2509803921568627"/>';
+			panorama+='      <hotspot target="168.25/0/83.3" skinid="ht_node" tilt="-19.43" url="{node2}" description="" title="&#1040;&#1091;&#1076;. 236&#1072;" id="Point01" pan="-139.22"/>';
+			panorama+='      <hotspot target="88.56/0/74.1" skinid="ht_node" tilt="2.7" url="{node3}" description="" title="&#1040;&#1091;&#1076;. 426" id="Point02" pan="-139"/>';
+			panorama+='    </hotspots>';
+			panorama+='    <media/>';
+			panorama+='    <transition zoomout="0" type="crossdissolve" blendcolor="0x000000" zoomin="0" enabled="1" blendtime="1" softedge="0" zoomoutpause="1" zoomspeed="2" zoomfov="20"/>';
+			panorama+='    <autorotate noderandom="1" returntohorizon="0.000" speed="0.050" startloaded="1" nodedelay="0.00" useanimation="0" delay="6.00"/>';
+			panorama+='    <control lockedmouse="0" lockedkeyboardzoom="0" sensitivity="8" lockedkeyboard="0" invertwheel="1" invertcontrol="1" contextfullscreen="0" hideabout="1" lockedwheel="0" simulatemass="1" speedwheel="1" dblclickfullscreen="0">';
+			panorama+='      <menulink text="&#1057;&#1072;&#1081;&#1090; &#1044;&#1042;&#1043;&#1059;&#1055;&#1057;" url="http://www.dvgups.ru/"/>';
+			panorama+='      <menulink text="&#1069;&#1083;&#1077;&#1082;&#1090;&#1088;&#1086;&#1085;&#1085;&#1099;&#1081; &#1078;&#1091;&#1088;&#1085;&#1072;&#1083; " url="http://moydvgups.ru/"/>';
+			panorama+='    </control>';
+			panorama+='  </panorama>';
+			panorama+='</tour>';
+			panorama+='';
+		pano.readConfigString(panorama);
+			gyro=new pano2vrGyro(pano,"container"); gyro.disable();
+		</script>
+		<noscript>
+			<p><b>Please enable Javascript!</b></p>
+		</noscript>
+<!-- - - - - - - 8<- - - - - - cut here - - - - - 8<- - - - - - - --> 
+		<!-- Hack needed to hide the url bar on iOS 9, iPhone 5s --> 
+		<div style="width:1px;height:1px;"></div>
+	</body>
+</html>
